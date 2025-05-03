@@ -1,33 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>情感 MBTI 测试</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>情感MBTI测试</title><link rel="stylesheet" href="style.css"></head>
 <body>
 <div class="container">
-  <section id="welcome">
-    <h1>情感 MBTI 测试</h1>
-    <p>共 80 题，约 8 分钟完成。</p>
-    <button id="startBtn">开始测试</button>
-  </section>
-
-  <section id="quiz" class="hidden">
-    <div class="progress"><div id="bar"></div></div>
-    <h3 id="qTitle"></h3>
-    <button class="option" id="btnA"></button>
-    <button class="option" id="btnB"></button>
-  </section>
-
-  <section id="result" class="hidden">
-    <h2>你的类型：<span id="typeCode"></span></h2>
-    <p id="typeDesc"></p>
-    <pre id="scoreBox"></pre>
-    <button onclick="location.reload()">重新测试</button>
-  </section>
+<section id="welcome"><h1>情感MBTI测试</h1><button id="start">开始</button></section>
+<section id="quiz" class="hide">
+<div class="progress"><div id="bar"></div></div>
+<h3 id="title"></h3>
+<button class="opt" id="optA"></button>
+<button class="opt" id="optB"></button>
+</section>
+<section id="result" class="hide">
+<h2>类型:<span id="code"></span></h2>
+<pre id="score"></pre>
+</section>
 </div>
 <script src="app.js"></script>
-</body>
-</html>
+</body></html>

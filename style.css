@@ -1,1 +1,7 @@
 body{font-family:Arial} .hide{display:none} .opt{display:block;margin:10px;padding:10px;border:1px solid #999;} .progress{height:6px;background:#eee}.progress div{height:6px;background:#4ecdc4;width:0;}
+
+#score{
+  margin-top:16px;
+  line-height:1.6;
+  white-space:pre-wrap;
+}

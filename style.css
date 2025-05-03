@@ -1,7 +1,98 @@
-body{font-family:Arial} .hide{display:none} .opt{display:block;margin:10px;padding:10px;border:1px solid #999;} .progress{height:6px;background:#eee}.progress div{height:6px;background:#4ecdc4;width:0;}
+/* ---------- 主题变量 ---------- */
+:root{
+  --primary:#ff6b6b;
+  --primary-light:#ffe3e3;
+  --accent:#4ecdc4;
+  --bg:#f8f9fa;
 
-#score{
-  margin-top:16px;
+  --radius:12px;
+  --shadow:0 4px 18px rgba(0,0,0,.08);
+  --font:'Poppins','PingFang SC',Helvetica,Arial,sans-serif;
+}
+
+/* ---------- 基础 ---------- */
+body{
+  margin:0;
+  background:var(--bg);
+  font-family:var(--font);
   line-height:1.6;
-  white-space:pre-wrap;
+  color:#333;
+}
+.hide{display:none;}
+
+/* ---------- 居中卡片 ---------- */
+.container{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.card{
+  background:#fff;
+  width:100%;
+  max-width:680px;
+  padding:32px 40px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* ---------- 按钮 / 选项 ---------- */
+.opt,button{
+  display:block;
+  width:100%;
+  padding:14px 18px;
+  margin:14px 0;
+  background:var(--primary-light);
+  border:2px solid transparent;
+  border-radius:var(--radius);
+  font-size:16px;
+  cursor:pointer;
+  transition:all .25s ease;
+}
+.opt:hover,button:hover{
+  background:var(--primary);
+  color:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+/* ---------- 进度条 ---------- */
+.progress{
+  height:8px;
+  background:#e9ecef;
+  border-radius:4px;
+  margin-bottom:28px;
+  overflow:hidden;
+}
+.progress>div{
+  height:100%;
+  background:var(--accent);
+  width:0;
+  border-radius:4px;
+  transition:width .4s cubic-bezier(.4,0,.2,1);
+}
+
+/* ---------- 结果页 ---------- */
+#result h2{font-size:26px;margin-bottom:12px;}
+#desc{
+  background:#fafafa;
+  border-left:4px solid var(--primary);
+  padding:14px 16px;
+  border-radius:8px;
+  margin-bottom:24px;
+}
+#score{
+  white-space:pre-line;
+  font-family:Menlo,monospace;
+  background:#fff;
+  border:1px dashed #ddd;
+  padding:12px 14px;
+  border-radius:6px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:600px){
+  .card{padding:24px;}
+  .opt,button{font-size:15px;padding:12px;}
 }

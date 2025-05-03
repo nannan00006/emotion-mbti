@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>情感MBTI测试</title><link rel="stylesheet" href="style.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>情感 MBTI 测试</title>
+
+  <!-- 字体 & 样式 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
+
 <div class="container">
-<section id="welcome"><h1>情感MBTI测试</h1><button id="start">开始</button></section>
-<section id="quiz" class="hide">
-<div class="progress"><div id="bar"></div></div>
-<h3 id="title"></h3>
-<button class="opt" id="optA"></button>
-<button class="opt" id="optB"></button>
-</section>
-<section id="result" class="hide">
-<h2>类型:<span id="code"></span></h2>
-<pre id="score"></pre>
-</section>
+  <div class="card">
+
+    <!-- 欢迎页 -->
+    <section id="welcome">
+      <h1>情感 MBTI 测试</h1>
+      <p>通过 80 道题，快速洞察你在爱情与友情中的行为模式</p>
+      <button id="start">开始测试</button>
+    </section>
+
+    <!-- 测试页 -->
+    <section id="quiz" class="hide">
+      <div class="progress"><div id="bar"></div></div>
+      <h3 id="title"></h3>
+      <button class="opt" id="optA"></button>
+      <button class="opt" id="optB"></button>
+    </section>
+
+    <!-- 结果页 -->
+    <section id="result" class="hide">
+      <h2>你的类型：<span id="code"></span></h2>
+      <div id="desc"></div>
+      <pre id="score"></pre>
+      <button onclick="location.reload()">重新测试</button>
+    </section>
+
+  </div>
 </div>
+
 <script src="app.js"></script>
-</body></html>
+</body>
+</html>
